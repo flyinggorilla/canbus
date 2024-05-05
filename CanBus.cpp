@@ -113,7 +113,7 @@ uint32_t CanBus::ReadAlerts()
     }
     else
     {
-        alerts = 0; // timeout or error
+        alerts = 0xFFFFFFFF; // timeout or error
     }
     return alerts;
 }
