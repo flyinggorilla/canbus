@@ -1,7 +1,7 @@
 #ifndef CAN_BUS_H_
 #define CAN_BUS_H_
 
-#include <esp_system.h>
+#include <esp_log.h>
 #include <driver/gpio.h>
 #include <driver/twai.h>
 
@@ -23,7 +23,7 @@ public:
 
     uint32_t ReadAlerts();
 
-    bool ReadStatus();
+    void GetStatusInfo(twai_status_info_t* statusInfo);
     twai_status_info_t statusInfo;
 
 

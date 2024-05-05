@@ -1,7 +1,18 @@
 version: "0.0.5"
 description: Can bus component for ESP-IDF to handle common peripheral tasks
 url: https://github.com/flyinggorilla/canbus.git
+files:
+  include:
+    - "components/canbus/*"
+  exclude:
+    - "docs/**/*"
+    - "docs"
+    - "test/**/*"
+    - "test"
+    - "Test.cpp"
+    - "CmakeLists.txt"
 dependencies:
   idf:
     version: ">=5.2.0"
+
 

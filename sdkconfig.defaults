@@ -1,0 +1,45 @@
+###################
+# Mandatory overrides for default sdkconfig (idf.py menuconfig)
+# This list will be used when creating a new sdkconfig from scratch
+#
+
+#
+# Flash
+#
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="16MB"
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y
+
+
+
+
+#
+# Bootloader config
+#
+CONFIG_BOOTLOADER_APP_ROLLBACK_ENABLE=y
+
+
+#
+# TWAI configuration
+#
+CONFIG_TWAI_ISR_IN_IRAM=y
+
+#
+# Compiler options
+#
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y
+
+
+#
+# Log output
+#
+# use system time instead of millisecs since start.
+CONFIG_LOG_TIMESTAMP_SOURCE_SYSTEM=y
+
+
+#
+# GPIO Configuration
+#
+CONFIG_GPIO_CTRL_FUNC_IN_IRAM=y
+# end of GPIO Configuration
+

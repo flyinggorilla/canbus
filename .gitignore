@@ -1,0 +1,22 @@
+# Ignore build output
+build/
+
+# Ignore generated files
+*.bin
+*.elf
+*.map
+*.partitions
+*.project.bin
+*.project.map
+
+# Ignore editor and IDE files
+.vscode/
+.idea/
+
+#managed components
+managed_components/*
+#!managed_components/flyinggorilla__canbus
+
+#generated header files
+sdkconfig.old
+sdkconfig

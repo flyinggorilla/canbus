@@ -95,11 +95,11 @@ const char *CanBus::ErrorToMessage(esp_err_t error)
     }
 }
 
-bool CanBus::ReadStatus()
+void CanBus::GetStatusInfo(twai_status_info_t* statusInfo)
 {
-    twai_get_status_info(&statusInfo);
-    ESP_LOGI(tag, "state=%d, msgs_to_tx=%lu, msgs_to_rx=%lu, tx_error_counter=%lu, rx_error_counter=%lu, tx_failed_count=%lu, rx_missed_count=%lu, rx_overrun_count=%lu, arb_lost_count=%lu, bus_error_count=%lu", statusInfo.state, statusInfo.msgs_to_tx, statusInfo.msgs_to_rx, statusInfo.tx_error_counter, statusInfo.rx_error_counter, statusInfo.tx_failed_count, statusInfo.rx_missed_count, statusInfo.rx_overrun_count, statusInfo.arb_lost_count, statusInfo.bus_error_count);
-    return true;
+    if (!statusInfo) return;
+
+    twai_get_status_info(statusInfo);
 }
 
 /// @brief Reads CAN Bus alerts and resets them afterwards
