@@ -1,0 +1,5 @@
+{
+    "idf.adapterTargetName": "esp32s3",
+    "idf.espIdfPathWin": "C:\\Users\\bernd\\esp\\v5.2.1\\esp-idf",
+    "idf.toolsPathWin": "C:\\Users\\bernd\\.espressif501"
+}
