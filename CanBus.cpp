@@ -21,6 +21,7 @@ CanBus::CanBus(gpio_num_t twaiRX, gpio_num_t twaiTX)
                                    TWAI_ALERT_BUS_RECOVERED |
                                    TWAI_ALERT_ABOVE_ERR_WARN |
                                    TWAI_ALERT_BUS_ERROR |
+                                   TWAI_ALERT_ARB_LOST |
                                    TWAI_ALERT_TX_FAILED |
                                    TWAI_ALERT_RX_QUEUE_FULL |
                                    TWAI_ALERT_ERR_PASS |
